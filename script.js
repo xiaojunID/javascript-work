@@ -8,16 +8,14 @@ var ChangeMargin = [0,0,0,0,0];
 var moveAmountArray = [5,10,15,20,25];
 
 
-var whichBox;
 function boxClicked(i){
     return function(){
-        whichBox = i;
-        console.log("Hey, box"+ whichBox + "clicked!");
-        ChangeMargin[whichBox] += moveAmountArray[whichBox];
+        console.log("Hey, box"+ i + "clicked!");
+        ChangeMargin[i] += moveAmountArray[i];
         if(i == 4){
-            boxes[whichBox].style.marginTop = ChangeMargin[whichBox] + "px";
+            boxes[i].style.marginTop = ChangeMargin[i] + "px";
         }else{
-        boxes[whichBox].style.marginLeft = ChangeMargin[whichBox] + "px";
+        boxes[i].style.marginLeft = ChangeMargin[i] + "px";
         }
     };
 }
